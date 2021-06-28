@@ -14,10 +14,14 @@ read DESCRIPTION
 echo "What is your github username?"
 read USERNAME
 
-# step 2: initialise the repo locally, create blank README, add and commit
+# step 2: initialise the repo locally, create blank README if it doesn't exist, add and commit
 git init
-touch README.MD
-git add README.MD
+if [-f "README.md"]; then
+	echo "README found, not creating..."
+else
+	touch README.MD
+fi
+git add *
 git commit -m 'initial commit -setup with .sh script'
 
 
