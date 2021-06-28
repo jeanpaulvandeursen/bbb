@@ -1,0 +1,1 @@
+alias px-on='export HTTP_PROXY=127.0.0.1:9000 HTTPS_PROXY=127.0.0.1:9000'
