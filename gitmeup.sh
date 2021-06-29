@@ -19,7 +19,7 @@ git init
 if [-f "README.md"]; then
 	echo "README found, not creating..."
 else
-	touch README.MD
+	touch README.md
 fi
 git add *
 git commit -m 'initial commit -setup with .sh script'
