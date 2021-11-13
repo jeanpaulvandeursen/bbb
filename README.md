@@ -16,7 +16,7 @@ JSON Output is formatted using the [jq command-line JSON processor](https://sted
 * gitlistrepos.sh - list remote git repositories
 * gitmeup.sh - create local and remote git repository
 
-## Other scripts
+## Work scripts
 
 killMS.sh - stop and start MS Outlook and Teams, -h only stops
 pxtest.sh - test the proxy settings
