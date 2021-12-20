@@ -9,6 +9,7 @@ All these commands rely on the presence of a Github Personal Access Token (PAT) 
 Example for adding a password to keychain:
 ```
 security add-generic-password -a <localuser> -s 'GitHub API Token Repos' -w <token>
+```
 
 ### JSON Query - jq
 
