@@ -1,4 +1,4 @@
-GITHUB_API_TOKEN=$(security find-generic-password -s 'GitHub API Token Repos' -w)
+GITHUB_API_TOKEN=$(security find-generic-password -s 'github' -w)
 
 echo "What repo do you want to delete?"
 read REPO_NAME
