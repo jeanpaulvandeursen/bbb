@@ -24,9 +24,14 @@ fi
 git add *
 git commit -m 'initial commit -setup with .sh script'
 
-
-# step 3 use github API to create the repo using the API token to authenticate
-curl -H "Authorization: token ${GITHUB_API_TOKEN}" -X POST https://api.github.com/user/repos -d '{"name":"'"${REPO_NAME}"'", "description": "'"${DESCRIPTION}"'", "private":"true"}' | jq '{id,name,created_at}'
+# step 3: use github API to create the repo
+curl \
+-X POST \
+-H "X-GitHub-Api-Version: 2022-11-28" \
+-H "Accept: application/vnd.github+json" \
+-H "Authorization: token ${GITHUB_API_TOKEN}" \
+https://api.github.com/user/repos \
+-d '{"name":"'"${REPO_NAME}"'", "description": "'"${DESCRIPTION}"'", "private":"true"}' | jq '{id,name,created_at}'
 
 #  step 4 add the remote github repo to local repo and push
 git remote add origin https://github.com/${USERNAME}/${REPO_NAME}.git
