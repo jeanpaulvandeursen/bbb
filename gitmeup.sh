@@ -4,6 +4,12 @@ CURRENTDIR=${pwd}
 
 GITHUB_API_TOKEN=$(security find-generic-password -s 'github' -w)
 
+if [[ $? -ne 0 ]]
+then
+	echo "No token 'github' found"
+	exit 0
+fi
+
 # step 1: name of the remote repo. Enter a SINGLE WORD ..or...separate with hyphens
 echo "What name do you want to give your remote repo?"
 read REPO_NAME
