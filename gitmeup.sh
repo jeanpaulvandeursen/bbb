@@ -2,7 +2,7 @@
 
 CURRENTDIR=${pwd}
 
-GITHUB_API_TOKEN=$(security find-generic-password -s 'github' -w)
+GITHUB_API_TOKEN=`token.sh get github`
 
 if [[ $? -ne 0 ]]
 then
