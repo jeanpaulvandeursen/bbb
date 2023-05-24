@@ -20,7 +20,7 @@ then
 	then
 		exit $STATUS
 	else
-	echo $TOKENVALUE | pbcopy
+	echo $TOKENVALUE
 	fi
 elif [[ $1 == "del" ]]
 then
