@@ -19,6 +19,7 @@ JSON Output is formatted using the [jq command-line JSON processor](https://sted
 
 ## Git Repository related
 
+* gitaccesstest.sh - test for access to githu
 * gitdelrepo.sh - delete remote git repository
 * gitlistrepos.sh - list remote git repositories
 * gitmeup.sh - create local and remote git repository
