@@ -1,7 +1,18 @@
-GITHUB_API_TOKEN=$(security find-generic-password -s 'github' -w)
+GITHUB_API_TOKEN=`token.sh get github`
 
-echo "What repo do you want to delete?"
-read REPO_NAME
+if [[ $? -ne 0 ]]
+then
+        echo "No token 'github' found"
+        exit 0
+fi
+
+if [ $1 ]
+then
+    REPO_NAME=$1
+else
+    echo "What repo do you want to delete?"
+    read REPO_NAME
+fi
 
 echo "What is your github username?"
 read USERNAME
