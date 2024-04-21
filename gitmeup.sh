@@ -41,6 +41,6 @@ https://api.github.com/user/repos \
 
 #  step 4 add the remote github repo to local repo and push
 git remote add origin https://github.com/${USERNAME}/${REPO_NAME}.git
-git push --set-upstream origin master
+git push --set-upstream origin main
 
 echo "Done. Go to https://github.com/$USERNAME/$REPO_NAME to see." 
