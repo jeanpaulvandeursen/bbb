@@ -1,5 +1,14 @@
 #!/bin/sh
 
+usage() {
+    echo "Usage: $0 [add|get|del] [TOKEN_ID]"
+    exit 1
+}
+
+if [[ -z "$1" ]]; then
+    usage
+fi
+
 if [ $2 ]
 then
     TOKENID=$2
